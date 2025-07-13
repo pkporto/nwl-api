@@ -1,3 +1,31 @@
 # Variables
 @baseUrl = http://localhost:3331
-GET {{baseUrl}}/rooms
+
+# get
+# @name getRooms
+ GET {{baseUrl}}/rooms
+
+###
+
+POST {{baseUrl}}/rooms
+Content-Type: application/json
+
+{
+    "name":"teste",
+    "description": "teste description"
+}
+
+###
+
+# teste
+GET {{baseUrl}}/rooms/6b70810c-74ff-4ce9-2665-dbe392f0610b/questions
+
+###
+
+
+POST {{baseUrl}}/rooms/637fe503-b247-4b4b-bf87-e14f2b8f873a/question
+Content-Type: application/json
+
+{
+    "question":"pergunta teste"
+}

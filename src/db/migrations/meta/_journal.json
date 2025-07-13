@@ -8,6 +8,13 @@
       "when": 1752164826726,
       "tag": "0000_chemical_vanisher",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752349294971,
+      "tag": "0001_unknown_warpath",
+      "breakpoints": true
     }
   ]
 }

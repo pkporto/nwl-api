@@ -6,7 +6,10 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod';
 import { env } from './env.ts';
+import { createQuestionRoute } from './http/routes/create-question.ts';
+import { createRoomRoute } from './http/routes/create-room.ts';
 import { getRoomsRoute } from './http/routes/get-rooms.ts';
+import { getRoomsQuestionsRoute } from './http/routes/get-rooms-questions.ts';
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -18,5 +21,8 @@ app.setSerializerCompiler(serializerCompiler);
 app.setValidatorCompiler(validatorCompiler);
 
 app.register(getRoomsRoute);
+app.register(createRoomRoute);
+app.register(getRoomsQuestionsRoute);
+app.register(createQuestionRoute);
 
 app.listen({ port: env.PORT });
